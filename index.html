@@ -1,43 +1,194 @@
-<section id="home" class="personal-info">
-    <h1>ZENG Yixin</h1>
-    <p><strong>Student of CDT501 Computer Systems and Programming Basics</strong></p>
-    <p>Lingnan University, Hong Kong</p>
-    <p>GitHub: <a class="link" href="https://github.com/yixinzeng" target="_blank">My GitHub</a></p>
-    <p>Hugging Face: <a class="link" href="https://huggingface.co/Zn516" target="_blank">My Hugging Face</a></p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yixin Zeng | CDT501 Assignment</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
 
-<section id="about">
-    <h2>About This Website</h2>
-    <p>This is my personal website for CDT501 Lecture8 homework, built with GitHub Pages and Hugging Face Spaces, following the course's AI-Assisted Learning and Programming content.</p>
-    <p>My learning focus in this course:
-        <ul>
-            <li>AI-Assisted Programming and Learning</li>
-            <li>Hugging Face Ecosystem (Models, Transformers, Spaces)</li>
-            <li>Large Language Models Applications</li>
-            <li>Computer Systems Basics</li>
-        </ul>
-    </p>
-</section>
+        body {
+            background-color: #f8f9fa; 
+            color: #212529;
+            line-height: 1.7;
+            padding: 20px;
+        }
 
-<section id="ai-demo">
-    <h2>AI Demo (Hugging Face Space)</h2>
-    <p>This is an AI chatbot demo built with Gradio on Hugging Face Spaces, created following the steps in Lecture8.</p>
-    <div class="demo-container">
-        <gradio-app src="https://Zn516-cdt501-ai-chatbot.hf.space" theme_mode="light" style="width: 100%; height: 600px;"></gradio-app>
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        /* ------------- 头部 Header ------------- */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #0056b3; 
+            margin-bottom: 40px;
+        }
+
+        /* 头像样式：圆形，带边框 */
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 校徽 */
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* 个人信息标题 */
+        .header-text h1 {
+            font-size: 32px;
+            color: #0056b3; /
+            margin-bottom: 8px;
+        }
+
+        .header-text .subtitle {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .header-text .course {
+            font-weight: 500;
+            color: #495057;
+        }
+
+        /* ------------- 内容模块通用样式 ------------- */
+        .section {
+            margin-bottom: 45px;
+        }
+
+        .section h2 {
+            font-size: 22px;
+            color: #0056b3;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 20px;
+        }
+
+        .section p, .section ul {
+            font-size: 16px;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            padding-left: 20px;
+        }
+
+        /* ------------- 代码块样式 ------------- */
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            color: #d63384; /* 粉色代码色 */
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* ------------- 响应式：手机端适配 ------------- */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部：头像 + 校徽 + 个人信息 -->
+        <div class="header">
+            <img src="avatar.jpg" alt="Avatar" class="avatar">
+            <div class="header-text">
+                <h1>Yixin Zeng</h1>
+                <p class="subtitle">
+                    <img src="logo.png" alt="Lingnan Logo" class="logo">
+                    MScCT+ Student | Lingnan University, Hong Kong
+                </p>
+                <p class="course">CDT501 Computer Systems and Programming Basics | Student ID: 3228756</p>
+            </div>
+        </div>
+
+        <!-- 模块1: About Me -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Hello! I am Yixin Zeng, currently pursuing the MScCT+ programme at Lingnan University in Hong Kong. I am passionate about AI, digital assets, business analysis, and data analytics.</p>
+            <p>My learning focus in CDT501 includes:</p>
+            <ul>
+                <li>AI-Assisted Programming and Learning</li>
+                <li>Hugging Face Ecosystem (Models, Transformers, Spaces)</li>
+                <li>Large Language Models Applications</li>
+                <li>Computer Systems Basics</li>
+            </ul>
+        </div>
+
+        <!-- 模块2: Interactive AI Demo -->
+        <div class="section">
+            <h2>Interactive AI Demo</h2>
+            <p>This is an interactive sentiment analysis demo built with Python, Hugging Face Transformers, and Gradio. Users can enter a sentence and receive an AI-generated sentiment result.</p>
+            <div style="text-align: center; margin: 20px 0;">
+                <div style="display: inline-block; border: 1px solid #ddd; padding: 20px 40px; border-radius: 10px; background: #fff;">
+                    <h3 style="color: #212529; margin-bottom: 10px;">Yixin Zeng's Sentiment Analysis Demo</h3>
+                    <p style="color: #6c757d;">A simple AI demo for CDT501 Assignment</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 模块3: Python Script -->
+        <div class="section">
+            <h2>AI-Assisted Python Script</h2>
+            <p>The core code of the sentiment analysis pipeline using Hugging Face Transformers:</p>
+            <div class="code-block">
+from transformers import pipeline
+classifier = pipeline("sentiment-analysis")
+result = classifier("I love using AI for programming")
+print(result)
+            </div>
+            <p><strong>View Full Python Code</strong> → <a href="https://github.com/yixinzeng/yixinzeng.github.io/blob/main/ai_script.py" target="_blank" style="color: #0056b3; text-decoration: none;">Here</a></p>
+        </div>
+
+        <!-- 模块4: Reflection -->
+        <div class="section">
+            <h2>Reflection on AI-Assisted Programming</h2>
+            <p>AI has lowered work barriers and boosted productivity greatly. It makes daily life easier and drives economic changes. Yet, it risks fostering lazy thinking—over-reliance may weaken our ability to think and solve problems independently.</p>
+            <p>I see AI as a tool, not a substitute for my mind. I’ll use it to handle simple tasks and focus on improving my own thinking and creativity. Only this way can we benefit from AI without losing our core strengths.</p>
+        </div>
+
+        <!-- 模块5: Contact -->
+        <div class="section">
+            <h2>Contact</h2>
+            <p><strong>Email:</strong> yixinzeng@ln.hk</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yixinzeng/yixinzeng.github.io" target="_blank" style="color: #0056b3; text-decoration: none;">My GitHub Homepage</a></p>
+        </div>
     </div>
-</section>
-
-<section id="python-code">
-    <h2>AI-Assisted Python Script</h2>
-    <p>This is the Python script developed with AI assistance for this homework, the full code and introduction can be found in the link below.</p>
-    <p><a class="link" href="https://github.com/yixinzeng/yixinzeng.github.io/blob/main/ai_script.py" target="_blank">View Full Python Code</a></p>
-</section>
-
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Student Email: <a class="link" href="mailto:yixinzeng@ln.edu.hk">yixinzeng@ln.edu.hk</a></p>
-</section>
-
-<footer>
-    <p>© 2026 Your Name | CDT501 Homework 4 | Hosted on GitHub Pages</p>
-</footer>
+</body>
+</html>
